@@ -25,6 +25,26 @@ cmake --build build32 --config Release
 cmake --build build64 --config Release
 ```
 
+## Building for Linux (on WSL)
+
+First update,
+
+```
+sudo apt update
+sudo apt upgrade -y
+sudo apt install build-essentials -y
+```
+
+then build,
+
+```
+mkdir build
+cd build
+sudo cmake ..
+sudo make
+```
+
+
 ## CLI Options
 
 ```
