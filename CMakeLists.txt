@@ -5,6 +5,8 @@ project(flower LANGUAGES C)
 # Automatically determine platform name
 if(${CMAKE_SYSTEM_NAME} STREQUAL "Linux")
     set(PLATFORM_NAME "linux")
+    set( CMAKE_CXX_COMPILER "/usr/bin/g++" )
+    set( CMAKE_C_COMPILER "/usr/bin/gcc" )
 elseif(${CMAKE_SYSTEM_NAME} STREQUAL "Darwin")
     set(PLATFORM_NAME "macos")
 elseif(${CMAKE_SYSTEM_NAME} STREQUAL "Windows")
