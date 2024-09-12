@@ -15,6 +15,16 @@ bin/flower-linux # for Linux
 bin/flower-windows # for Windows
 ```
 
+## Building for Windows
+From the root path .\flower, run the following commands in order,
+
+```
+cmake -G "Visual Studio 17 2022" -A Win32 -S . -B "build32"
+cmake -G "Visual Studio 17 2022" -A x64 -S . -B "build64"
+cmake --build build32 --config Release
+cmake --build build64 --config Release
+```
+
 ## CLI Options
 
 ```
