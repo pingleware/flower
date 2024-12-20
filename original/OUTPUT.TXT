@@ -1,0 +1,1034 @@
+
+
+flower 04.00		Tue Jun 24 20:38:02 1997
+
+
+
+---------- main.c ----------
+
+main - 54 function calls
+    TRACE_ENTRY
+    sprintf 2 times
+    TRACE_MSG 2 times
+    showSyntax [printrpt.c]
+    initFileInfo [memfunc.c]
+    initIsCalledByFuncInfo [memfunc.c]
+    sussOptions [main.c]
+    fprintf 17 times
+    strcpy
+    fopen 2 times
+    feof 2 times
+    fgets 2 times
+    rewind
+    cleanUpFileName [main.c]
+    strncpy
+    addToFileList [mniplist.c]
+    endOfFileList [mniplist.c]
+    processFiles [main.c]
+    fclose 2 times
+    updateAllCalledFuncFileNm [updtlist.c]
+    updateCalledFuncBase [updtlist.c]
+    updateCircularReferences [updtlist.c]
+    printCalledFuncReport [printrpt.c]
+    createCalledByFuncList [mniplist.c]
+    printCallingFuncReport [printrpt.c]
+    updateNotCalledFuncList [updtlist.c]
+    printCallTreeReport [printrpt.c]
+    freeExFuncList [main.c]
+    freeLists [mniplist.c]
+    freeIsCalledByList [mniplist.c]
+    _dump_allocated
+    TRACE_EXIT
+
+sussOptions - 3 function calls
+    strcpy
+    setExFuncListFromFile [main.c]
+    addToExFuncList [main.c]
+
+setExFuncListFromFile - 8 function calls
+    fopen
+    fprintf
+    feof 2 times
+    fgets
+    strtok
+    addToExFuncList [main.c]
+    fclose
+
+addToExFuncList - 7 function calls
+    TRACE_ENTRY
+    sprintf
+    TRACE_MSG
+    malloc
+    memset
+    strcpy
+    TRACE_EXIT
+
+freeExFuncList - 1 function call
+    free
+
+cleanUpFileName - 3 function calls
+    memset
+    isspace
+    strncpy
+
+processFiles - 12 function calls
+    fseek 2 times
+    fprintf 4 times
+    ftell
+    malloc
+    memset
+    fread
+    processTheText [main.c]
+    free
+
+processTheText - 6 function calls
+    getNextToken [main.c]
+    getCalledFunction [main.c]
+    strlen
+    addToCalledFuncList [mniplist.c]
+    getCurrentFunction [main.c]
+    addToFuncList [mniplist.c]
+
+getNextToken - 0 function calls
+
+getPrevToken - 0 function calls
+
+getCalledFunction - 10 function calls
+    TRACE_ENTRY
+    memset
+    getPrevToken [main.c] 2 times
+    memcpy
+    cleanUpFuncName [main.c]
+    isReservedWord [main.c]
+    isReservedSymbol [main.c]
+    isExcludedFunc [main.c]
+    TRACE_EXIT
+
+getCurrentFunction - 22 function calls
+    TRACE_ENTRY
+    sprintf
+    TRACE_MSG 4 times
+    memset
+    getPrevToken [main.c] 4 times
+    fooledByStructOrUnion [main.c]
+    TRACE_EXIT 4 times
+    memcpy
+    cleanUpFuncName [main.c]
+    isReservedWord [main.c]
+    isReservedSymbol [main.c]
+    isExcludedFunc [main.c]
+    strlen
+
+fooledByStructOrUnion - 6 function calls
+    strstr
+    malloc
+    memset
+    memcpy
+    isspace
+    free
+
+isReservedWord - 9 function calls
+    strcmp 9 times
+
+isReservedSymbol - 11 function calls
+    strcmp 11 times
+
+isExcludedFunc - 7 function calls
+    TRACE_ENTRY
+    TRACE_MSG 3 times
+    strcmp
+    TRACE_EXIT 2 times
+
+cleanUpFuncName - 8 function calls
+    TRACE_ENTRY
+    TRACE_MSG 2 times
+    memset
+    isspace
+    isEmbeddedSymbol [main.c]
+    strncpy
+    TRACE_EXIT
+
+isEmbeddedSymbol - 1 function call
+    strchr
+
+
+flower 04.00		Tue Jun 24 20:38:02 1997
+
+
+
+---------- mniplist.c ----------
+
+addToFileList - 9 function calls
+    TRACE_ENTRY
+    sprintf
+    TRACE_MSG
+    strlen
+    strncpy 2 times
+    endOfFileList [mniplist.c]
+    fileInfoMalloc [memfunc.c]
+    TRACE_EXIT
+
+addToFuncList - 6 function calls
+    TRACE_ENTRY
+    TRACE_MSG
+    funcInfoMalloc [memfunc.c]
+    strncpy 2 times
+    TRACE_EXIT
+
+addToCalledFuncList - 3 function calls
+    funcInCalledList [mniplist.c]
+    funcInfoMalloc [memfunc.c]
+    strncpy
+
+createCalledByFuncList - 4 function calls
+    TRACE_ENTRY
+    startOfFileList [mniplist.c]
+    addToCalledByFuncList [mniplist.c]
+    TRACE_EXIT
+
+addToCalledByFuncList - 17 function calls
+    TRACE_ENTRY
+    sprintf
+    TRACE_MSG
+    strlen
+    strncpy 6 times
+    funcInCalledByFuncList [mniplist.c]
+    isCalledByMalloc [memfunc.c] 2 times
+    endOfCalledByFuncList [mniplist.c]
+    initIsCalledByFuncInfo [memfunc.c]
+    callerInList [mniplist.c]
+    TRACE_EXIT
+
+freeLists - 3 function calls
+    free 3 times
+
+freeIsCalledByList - 2 function calls
+    free 2 times
+
+endOfFileList - 0 function calls
+
+startOfFileList - 2 function calls
+    TRACE_ENTRY
+    TRACE_EXIT
+
+endOfCalledByFuncList - 0 function calls
+
+startOfCalledByFuncList - 0 function calls
+
+funcInCalledByFuncList - 3 function calls
+    startOfCalledByFuncList [mniplist.c]
+    strncmp 2 times
+
+callerInList - 2 function calls
+    strncmp 2 times
+
+nextNotCalledFunc - 0 function calls
+
+funcInFileList - 1 function call
+    strcmp
+
+funcInCalledList - 2 function calls
+    strncmp
+    strcmp
+
+
+flower 04.00		Tue Jun 24 20:38:02 1997
+
+
+
+---------- printrpt.c ----------
+
+printCalledFuncReport - 9 function calls
+    printBanner [printrpt.c]
+    printf 6 times
+    printFunctionIndented [printrpt.c]
+    strcmp
+
+printCallingFuncReport - 12 function calls
+    printBanner [printrpt.c]
+    printf 9 times
+    strlen 2 times
+
+printCallTreeReport - 10 function calls
+    printf 4 times
+    nextNotCalledFunc [mniplist.c] 2 times
+    printBanner [printrpt.c]
+    strcmp
+    printFunctionIndented [printrpt.c]
+    printSubTree [printrpt.c]
+
+printSubTree - 6 function calls
+    printFunctionIndented [printrpt.c]
+    printf 4 times
+    printSubTree [printrpt.c] recursive
+
+printFunction - 4 function calls
+    printf 3 times
+    strlen
+
+printFunctionIndented - 2 function calls
+    printf
+    printFunction [printrpt.c]
+
+printBanner - 3 function calls
+    time
+    printf
+    ctime
+
+showSyntax - 13 function calls
+    printf 13 times
+
+
+flower 04.00		Tue Jun 24 20:38:02 1997
+
+
+
+---------- memfunc.c ----------
+
+funcInfoMalloc - 2 function calls
+    malloc
+    initFuncInfo [memfunc.c]
+
+fileInfoMalloc - 2 function calls
+    malloc
+    initFileInfo [memfunc.c]
+
+isCalledByMalloc - 2 function calls
+    malloc
+    initIsCalledByFuncInfo [memfunc.c]
+
+initFileInfo - 1 function call
+    memset
+
+initFuncInfo - 1 function call
+    memset
+
+initIsCalledByFuncInfo - 1 function call
+    memset
+
+copyFuncInfo - 3 function calls
+    memset
+    strcpy 2 times
+
+
+flower 04.00		Tue Jun 24 20:38:02 1997
+
+
+
+---------- updtlist.c ----------
+
+updateNotCalledFuncList - 2 function calls
+    startOfFileList [mniplist.c]
+    funcInCalledByFuncList [mniplist.c]
+
+updateAllCalledFuncFileNm - 4 function calls
+    startOfFileList [mniplist.c]
+    strncpy 2 times
+    updateOneCalledFuncFileNm [updtlist.c]
+
+updateOneCalledFuncFileNm - 3 function calls
+    startOfFileList [mniplist.c]
+    strncmp
+    strncpy
+
+updateCalledFuncBase - 1 function call
+    funcInFileList [mniplist.c]
+
+updateCircularReferences - 10 function calls
+    TRACE_ENTRY
+    sprintf 3 times
+    TRACE_MSG 3 times
+    doTheCircularReferenceUpdate [updtlist.c]
+    freeUpTreeList [updtlist.c]
+    TRACE_EXIT
+
+doTheCircularReferenceUpdate - 37 function calls
+    TRACE_ENTRY
+    sprintf 16 times
+    TRACE_MSG 13 times
+    TRACE_EXIT 2 times
+    funcIsInUpTreeList [updtlist.c]
+    funcInfoMalloc [memfunc.c]
+    copyFuncInfo [memfunc.c]
+    doTheCircularReferenceUpdate [updtlist.c] recursive
+    free
+
+funcIsInUpTreeList - 13 function calls
+    TRACE_ENTRY
+    sprintf 4 times
+    TRACE_MSG 4 times
+    TRACE_EXIT 3 times
+    strcmp
+
+freeUpTreeList - 1 function call
+    free
+
+
+flower 04.00		Tue Jun 24 20:38:03 1997
+
+
+TRACE_ENTRY is called a total of 14 times from:
+    main [main.c]
+    addToExFuncList [main.c]
+    getCalledFunction [main.c]
+    getCurrentFunction [main.c]
+    isExcludedFunc [main.c]
+    cleanUpFuncName [main.c]
+    addToFileList [mniplist.c]
+    addToFuncList [mniplist.c]
+    createCalledByFuncList [mniplist.c]
+    addToCalledByFuncList [mniplist.c]
+    startOfFileList [mniplist.c]
+    updateCircularReferences [updtlist.c]
+    doTheCircularReferenceUpdate [updtlist.c]
+    funcIsInUpTreeList [updtlist.c]
+
+sprintf is called a total of 8 times from:
+    main [main.c]
+    addToExFuncList [main.c]
+    getCurrentFunction [main.c]
+    addToFileList [mniplist.c]
+    addToCalledByFuncList [mniplist.c]
+    updateCircularReferences [updtlist.c]
+    doTheCircularReferenceUpdate [updtlist.c]
+    funcIsInUpTreeList [updtlist.c]
+
+TRACE_MSG is called a total of 11 times from:
+    main [main.c]
+    addToExFuncList [main.c]
+    getCurrentFunction [main.c]
+    isExcludedFunc [main.c]
+    cleanUpFuncName [main.c]
+    addToFileList [mniplist.c]
+    addToFuncList [mniplist.c]
+    addToCalledByFuncList [mniplist.c]
+    updateCircularReferences [updtlist.c]
+    doTheCircularReferenceUpdate [updtlist.c]
+    funcIsInUpTreeList [updtlist.c]
+
+showSyntax [printrpt.c] is called from:
+    main [main.c]
+
+initFileInfo [memfunc.c] is called a total of 2 times from:
+    main [main.c]
+    fileInfoMalloc [memfunc.c]
+
+initIsCalledByFuncInfo [memfunc.c] is called a total of 3 times from:
+    main [main.c]
+    addToCalledByFuncList [mniplist.c]
+    isCalledByMalloc [memfunc.c]
+
+sussOptions [main.c] is called from:
+    main [main.c]
+
+fprintf is called a total of 3 times from:
+    main [main.c]
+    setExFuncListFromFile [main.c]
+    processFiles [main.c]
+
+strcpy is called a total of 4 times from:
+    main [main.c]
+    sussOptions [main.c]
+    addToExFuncList [main.c]
+    copyFuncInfo [memfunc.c]
+
+fopen is called a total of 2 times from:
+    main [main.c]
+    setExFuncListFromFile [main.c]
+
+feof is called a total of 2 times from:
+    main [main.c]
+    setExFuncListFromFile [main.c]
+
+fgets is called a total of 2 times from:
+    main [main.c]
+    setExFuncListFromFile [main.c]
+
+rewind is called from:
+    main [main.c]
+
+cleanUpFileName [main.c] is called from:
+    main [main.c]
+
+strncpy is called a total of 9 times from:
+    main [main.c]
+    cleanUpFileName [main.c]
+    cleanUpFuncName [main.c]
+    addToFileList [mniplist.c]
+    addToFuncList [mniplist.c]
+    addToCalledFuncList [mniplist.c]
+    addToCalledByFuncList [mniplist.c]
+    updateAllCalledFuncFileNm [updtlist.c]
+    updateOneCalledFuncFileNm [updtlist.c]
+
+addToFileList [mniplist.c] is called from:
+    main [main.c]
+
+endOfFileList [mniplist.c] is called a total of 2 times from:
+    main [main.c]
+    addToFileList [mniplist.c]
+
+processFiles [main.c] is called from:
+    main [main.c]
+
+fclose is called a total of 2 times from:
+    main [main.c]
+    setExFuncListFromFile [main.c]
+
+updateAllCalledFuncFileNm [updtlist.c] is called from:
+    main [main.c]
+
+updateCalledFuncBase [updtlist.c] is called from:
+    main [main.c]
+
+updateCircularReferences [updtlist.c] is called from:
+    main [main.c]
+
+printCalledFuncReport [printrpt.c] is called from:
+    main [main.c]
+
+createCalledByFuncList [mniplist.c] is called from:
+    main [main.c]
+
+printCallingFuncReport [printrpt.c] is called from:
+    main [main.c]
+
+updateNotCalledFuncList [updtlist.c] is called from:
+    main [main.c]
+
+printCallTreeReport [printrpt.c] is called from:
+    main [main.c]
+
+freeExFuncList [main.c] is called from:
+    main [main.c]
+
+freeLists [mniplist.c] is called from:
+    main [main.c]
+
+freeIsCalledByList [mniplist.c] is called from:
+    main [main.c]
+
+_dump_allocated is called from:
+    main [main.c]
+
+TRACE_EXIT is called a total of 14 times from:
+    main [main.c]
+    addToExFuncList [main.c]
+    getCalledFunction [main.c]
+    getCurrentFunction [main.c]
+    isExcludedFunc [main.c]
+    cleanUpFuncName [main.c]
+    addToFileList [mniplist.c]
+    addToFuncList [mniplist.c]
+    createCalledByFuncList [mniplist.c]
+    addToCalledByFuncList [mniplist.c]
+    startOfFileList [mniplist.c]
+    updateCircularReferences [updtlist.c]
+    doTheCircularReferenceUpdate [updtlist.c]
+    funcIsInUpTreeList [updtlist.c]
+
+setExFuncListFromFile [main.c] is called from:
+    sussOptions [main.c]
+
+addToExFuncList [main.c] is called a total of 2 times from:
+    sussOptions [main.c]
+    setExFuncListFromFile [main.c]
+
+strtok is called from:
+    setExFuncListFromFile [main.c]
+
+malloc is called a total of 6 times from:
+    addToExFuncList [main.c]
+    processFiles [main.c]
+    fooledByStructOrUnion [main.c]
+    funcInfoMalloc [memfunc.c]
+    fileInfoMalloc [memfunc.c]
+    isCalledByMalloc [memfunc.c]
+
+memset is called a total of 11 times from:
+    addToExFuncList [main.c]
+    cleanUpFileName [main.c]
+    processFiles [main.c]
+    getCalledFunction [main.c]
+    getCurrentFunction [main.c]
+    fooledByStructOrUnion [main.c]
+    cleanUpFuncName [main.c]
+    initFileInfo [memfunc.c]
+    initFuncInfo [memfunc.c]
+    initIsCalledByFuncInfo [memfunc.c]
+    copyFuncInfo [memfunc.c]
+
+free is called a total of 7 times from:
+    freeExFuncList [main.c]
+    processFiles [main.c]
+    fooledByStructOrUnion [main.c]
+    freeLists [mniplist.c]
+    freeIsCalledByList [mniplist.c]
+    doTheCircularReferenceUpdate [updtlist.c]
+    freeUpTreeList [updtlist.c]
+
+isspace is called a total of 3 times from:
+    cleanUpFileName [main.c]
+    fooledByStructOrUnion [main.c]
+    cleanUpFuncName [main.c]
+
+fseek is called from:
+    processFiles [main.c]
+
+ftell is called from:
+    processFiles [main.c]
+
+fread is called from:
+    processFiles [main.c]
+
+processTheText [main.c] is called from:
+    processFiles [main.c]
+
+getNextToken [main.c] is called from:
+    processTheText [main.c]
+
+getCalledFunction [main.c] is called from:
+    processTheText [main.c]
+
+strlen is called a total of 6 times from:
+    processTheText [main.c]
+    getCurrentFunction [main.c]
+    addToFileList [mniplist.c]
+    addToCalledByFuncList [mniplist.c]
+    printCallingFuncReport [printrpt.c]
+    printFunction [printrpt.c]
+
+addToCalledFuncList [mniplist.c] is called from:
+    processTheText [main.c]
+
+getCurrentFunction [main.c] is called from:
+    processTheText [main.c]
+
+addToFuncList [mniplist.c] is called from:
+    processTheText [main.c]
+
+getPrevToken [main.c] is called a total of 2 times from:
+    getCalledFunction [main.c]
+    getCurrentFunction [main.c]
+
+memcpy is called a total of 3 times from:
+    getCalledFunction [main.c]
+    getCurrentFunction [main.c]
+    fooledByStructOrUnion [main.c]
+
+cleanUpFuncName [main.c] is called a total of 2 times from:
+    getCalledFunction [main.c]
+    getCurrentFunction [main.c]
+
+isReservedWord [main.c] is called a total of 2 times from:
+    getCalledFunction [main.c]
+    getCurrentFunction [main.c]
+
+isReservedSymbol [main.c] is called a total of 2 times from:
+    getCalledFunction [main.c]
+    getCurrentFunction [main.c]
+
+isExcludedFunc [main.c] is called a total of 2 times from:
+    getCalledFunction [main.c]
+    getCurrentFunction [main.c]
+
+fooledByStructOrUnion [main.c] is called from:
+    getCurrentFunction [main.c]
+
+strstr is called from:
+    fooledByStructOrUnion [main.c]
+
+strcmp is called a total of 8 times from:
+    isReservedWord [main.c]
+    isReservedSymbol [main.c]
+    isExcludedFunc [main.c]
+    funcInFileList [mniplist.c]
+    funcInCalledList [mniplist.c]
+    printCalledFuncReport [printrpt.c]
+    printCallTreeReport [printrpt.c]
+    funcIsInUpTreeList [updtlist.c]
+
+isEmbeddedSymbol [main.c] is called from:
+    cleanUpFuncName [main.c]
+
+strchr is called from:
+    isEmbeddedSymbol [main.c]
+
+fileInfoMalloc [memfunc.c] is called from:
+    addToFileList [mniplist.c]
+
+funcInfoMalloc [memfunc.c] is called a total of 3 times from:
+    addToFuncList [mniplist.c]
+    addToCalledFuncList [mniplist.c]
+    doTheCircularReferenceUpdate [updtlist.c]
+
+funcInCalledList [mniplist.c] is called from:
+    addToCalledFuncList [mniplist.c]
+
+startOfFileList [mniplist.c] is called a total of 4 times from:
+    createCalledByFuncList [mniplist.c]
+    updateNotCalledFuncList [updtlist.c]
+    updateAllCalledFuncFileNm [updtlist.c]
+    updateOneCalledFuncFileNm [updtlist.c]
+
+addToCalledByFuncList [mniplist.c] is called from:
+    createCalledByFuncList [mniplist.c]
+
+funcInCalledByFuncList [mniplist.c] is called a total of 2 times from:
+    addToCalledByFuncList [mniplist.c]
+    updateNotCalledFuncList [updtlist.c]
+
+isCalledByMalloc [memfunc.c] is called from:
+    addToCalledByFuncList [mniplist.c]
+
+endOfCalledByFuncList [mniplist.c] is called from:
+    addToCalledByFuncList [mniplist.c]
+
+callerInList [mniplist.c] is called from:
+    addToCalledByFuncList [mniplist.c]
+
+startOfCalledByFuncList [mniplist.c] is called from:
+    funcInCalledByFuncList [mniplist.c]
+
+strncmp is called a total of 4 times from:
+    funcInCalledByFuncList [mniplist.c]
+    callerInList [mniplist.c]
+    funcInCalledList [mniplist.c]
+    updateOneCalledFuncFileNm [updtlist.c]
+
+printBanner [printrpt.c] is called a total of 3 times from:
+    printCalledFuncReport [printrpt.c]
+    printCallingFuncReport [printrpt.c]
+    printCallTreeReport [printrpt.c]
+
+printf is called a total of 8 times from:
+    printCalledFuncReport [printrpt.c]
+    printCallingFuncReport [printrpt.c]
+    printCallTreeReport [printrpt.c]
+    printSubTree [printrpt.c]
+    printFunction [printrpt.c]
+    printFunctionIndented [printrpt.c]
+    printBanner [printrpt.c]
+    showSyntax [printrpt.c]
+
+printFunctionIndented [printrpt.c] is called a total of 3 times from:
+    printCalledFuncReport [printrpt.c]
+    printCallTreeReport [printrpt.c]
+    printSubTree [printrpt.c]
+
+nextNotCalledFunc [mniplist.c] is called from:
+    printCallTreeReport [printrpt.c]
+
+printSubTree [printrpt.c] is called a total of 2 times from:
+    printCallTreeReport [printrpt.c]
+    printSubTree [printrpt.c]
+
+printFunction [printrpt.c] is called from:
+    printFunctionIndented [printrpt.c]
+
+time is called from:
+    printBanner [printrpt.c]
+
+ctime is called from:
+    printBanner [printrpt.c]
+
+initFuncInfo [memfunc.c] is called from:
+    funcInfoMalloc [memfunc.c]
+
+updateOneCalledFuncFileNm [updtlist.c] is called from:
+    updateAllCalledFuncFileNm [updtlist.c]
+
+funcInFileList [mniplist.c] is called from:
+    updateCalledFuncBase [updtlist.c]
+
+doTheCircularReferenceUpdate [updtlist.c] is called a total of 2 times from:
+    updateCircularReferences [updtlist.c]
+    doTheCircularReferenceUpdate [updtlist.c]
+
+freeUpTreeList [updtlist.c] is called from:
+    updateCircularReferences [updtlist.c]
+
+funcIsInUpTreeList [updtlist.c] is called from:
+    doTheCircularReferenceUpdate [updtlist.c]
+
+copyFuncInfo [memfunc.c] is called from:
+    doTheCircularReferenceUpdate [updtlist.c]
+
+
+Call Tree
+
+
+flower 04.00		Tue Jun 24 20:38:03 1997
+
+
+
+---------- main.c ----------
+
+main
+    TRACE_ENTRY
+    sprintf 2 times
+    TRACE_MSG 2 times
+    showSyntax [printrpt.c]
+        printf 13 times
+    initFileInfo [memfunc.c]
+        memset
+    initIsCalledByFuncInfo [memfunc.c]
+        memset
+    sussOptions [main.c]
+        strcpy
+        setExFuncListFromFile [main.c]
+            fopen
+            fprintf
+            feof 2 times
+            fgets
+            strtok
+            addToExFuncList [main.c]
+                TRACE_ENTRY
+                sprintf
+                TRACE_MSG
+                malloc
+                memset
+                strcpy
+                TRACE_EXIT
+            fclose
+        addToExFuncList [main.c]
+            TRACE_ENTRY
+            sprintf
+            TRACE_MSG
+            malloc
+            memset
+            strcpy
+            TRACE_EXIT
+    fprintf 17 times
+    strcpy
+    fopen 2 times
+    feof 2 times
+    fgets 2 times
+    rewind
+    cleanUpFileName [main.c]
+        memset
+        isspace
+        strncpy
+    strncpy
+    addToFileList [mniplist.c]
+        TRACE_ENTRY
+        sprintf
+        TRACE_MSG
+        strlen
+        strncpy 2 times
+        endOfFileList [mniplist.c]
+        fileInfoMalloc [memfunc.c]
+            malloc
+            initFileInfo [memfunc.c]
+                memset
+        TRACE_EXIT
+    endOfFileList [mniplist.c]
+    processFiles [main.c]
+        fseek 2 times
+        fprintf 4 times
+        ftell
+        malloc
+        memset
+        fread
+        processTheText [main.c]
+            getNextToken [main.c]
+            getCalledFunction [main.c]
+                TRACE_ENTRY
+                memset
+                getPrevToken [main.c] 2 times
+                memcpy
+                cleanUpFuncName [main.c]
+                    TRACE_ENTRY
+                    TRACE_MSG 2 times
+                    memset
+                    isspace
+                    isEmbeddedSymbol [main.c]
+                        strchr
+                    strncpy
+                    TRACE_EXIT
+                isReservedWord [main.c]
+                    strcmp 9 times
+                isReservedSymbol [main.c]
+                    strcmp 11 times
+                isExcludedFunc [main.c]
+                    TRACE_ENTRY
+                    TRACE_MSG 3 times
+                    strcmp
+                    TRACE_EXIT 2 times
+                TRACE_EXIT
+            strlen
+            addToCalledFuncList [mniplist.c]
+                funcInCalledList [mniplist.c]
+                    strncmp
+                    strcmp
+                funcInfoMalloc [memfunc.c]
+                    malloc
+                    initFuncInfo [memfunc.c]
+                        memset
+                strncpy
+            getCurrentFunction [main.c]
+                TRACE_ENTRY
+                sprintf
+                TRACE_MSG 4 times
+                memset
+                getPrevToken [main.c] 4 times
+                fooledByStructOrUnion [main.c]
+                    strstr
+                    malloc
+                    memset
+                    memcpy
+                    isspace
+                    free
+                TRACE_EXIT 4 times
+                memcpy
+                cleanUpFuncName [main.c]
+                    TRACE_ENTRY
+                    TRACE_MSG 2 times
+                    memset
+                    isspace
+                    isEmbeddedSymbol [main.c]
+                        strchr
+                    strncpy
+                    TRACE_EXIT
+                isReservedWord [main.c]
+                    strcmp 9 times
+                isReservedSymbol [main.c]
+                    strcmp 11 times
+                isExcludedFunc [main.c]
+                    TRACE_ENTRY
+                    TRACE_MSG 3 times
+                    strcmp
+                    TRACE_EXIT 2 times
+                strlen
+            addToFuncList [mniplist.c]
+                TRACE_ENTRY
+                TRACE_MSG
+                funcInfoMalloc [memfunc.c]
+                    malloc
+                    initFuncInfo [memfunc.c]
+                        memset
+                strncpy 2 times
+                TRACE_EXIT
+        free
+    fclose 2 times
+    updateAllCalledFuncFileNm [updtlist.c]
+        startOfFileList [mniplist.c]
+            TRACE_ENTRY
+            TRACE_EXIT
+        strncpy 2 times
+        updateOneCalledFuncFileNm [updtlist.c]
+            startOfFileList [mniplist.c]
+                TRACE_ENTRY
+                TRACE_EXIT
+            strncmp
+            strncpy
+    updateCalledFuncBase [updtlist.c]
+        funcInFileList [mniplist.c]
+            strcmp
+    updateCircularReferences [updtlist.c]
+        TRACE_ENTRY
+        sprintf 3 times
+        TRACE_MSG 3 times
+        doTheCircularReferenceUpdate [updtlist.c]
+            TRACE_ENTRY
+            sprintf 16 times
+            TRACE_MSG 13 times
+            TRACE_EXIT 2 times
+            funcIsInUpTreeList [updtlist.c]
+                TRACE_ENTRY
+                sprintf 4 times
+                TRACE_MSG 4 times
+                TRACE_EXIT 3 times
+                strcmp
+            funcInfoMalloc [memfunc.c]
+                malloc
+                initFuncInfo [memfunc.c]
+                    memset
+            copyFuncInfo [memfunc.c]
+                memset
+                strcpy 2 times
+            doTheCircularReferenceUpdate [updtlist.c] <circular reference>
+            free
+        freeUpTreeList [updtlist.c]
+            free
+        TRACE_EXIT
+    printCalledFuncReport [printrpt.c]
+        printBanner [printrpt.c]
+            time
+            printf
+            ctime
+        printf 6 times
+        printFunctionIndented [printrpt.c]
+            printf
+            printFunction [printrpt.c]
+                printf 3 times
+                strlen
+        strcmp
+    createCalledByFuncList [mniplist.c]
+        TRACE_ENTRY
+        startOfFileList [mniplist.c]
+            TRACE_ENTRY
+            TRACE_EXIT
+        addToCalledByFuncList [mniplist.c]
+            TRACE_ENTRY
+            sprintf
+            TRACE_MSG
+            strlen
+            strncpy 6 times
+            funcInCalledByFuncList [mniplist.c]
+                startOfCalledByFuncList [mniplist.c]
+                strncmp 2 times
+            isCalledByMalloc [memfunc.c] 2 times
+                malloc
+                initIsCalledByFuncInfo [memfunc.c]
+                    memset
+            endOfCalledByFuncList [mniplist.c]
+            initIsCalledByFuncInfo [memfunc.c]
+                memset
+            callerInList [mniplist.c]
+                strncmp 2 times
+            TRACE_EXIT
+        TRACE_EXIT
+    printCallingFuncReport [printrpt.c]
+        printBanner [printrpt.c]
+            time
+            printf
+            ctime
+        printf 9 times
+        strlen 2 times
+    updateNotCalledFuncList [updtlist.c]
+        startOfFileList [mniplist.c]
+            TRACE_ENTRY
+            TRACE_EXIT
+        funcInCalledByFuncList [mniplist.c]
+            startOfCalledByFuncList [mniplist.c]
+            strncmp 2 times
+    printCallTreeReport [printrpt.c]
+        printf 4 times
+        nextNotCalledFunc [mniplist.c] 2 times
+        printBanner [printrpt.c]
+            time
+            printf
+            ctime
+        strcmp
+        printFunctionIndented [printrpt.c]
+            printf
+            printFunction [printrpt.c]
+                printf 3 times
+                strlen
+        printSubTree [printrpt.c]
+            printFunctionIndented [printrpt.c]
+                printf
+                printFunction [printrpt.c]
+                    printf 3 times
+                    strlen
+            printf 4 times
+            printSubTree [printrpt.c] <circular reference>
+    freeExFuncList [main.c]
+        free
+    freeLists [mniplist.c]
+        free 3 times
+    freeIsCalledByList [mniplist.c]
+        free 2 times
+    _dump_allocated
+    TRACE_EXIT

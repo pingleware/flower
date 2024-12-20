@@ -1,0 +1,7 @@
+flower - reads C source code and
+writes three reports to stdout:
+functions and which functions
+they call, functions and which
+functions call them, and a call
+tree.  Includes C source.  
+Freeware.

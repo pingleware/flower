@@ -1,0 +1,1 @@
+flower main.c mniplist.c printrpt.c memfunc.c updtlist.c > output.txt

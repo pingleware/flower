@@ -1,0 +1,21 @@
+COMPILE = ICC /C /O+ /G5 /Wall /Wppt- /Wuni- /Wext- /Wtrd- /Tx /L+ /La+ /Ls+ /Lx+ /Ly+ /Fa+ /V"flower [$*] - Copyright (c) 1996, 1997 by Craig Schneiderwent"
+LINK = LINK386 /PM:VIO /ST:20480 /ALIGN:4 /L /M /EXEPACK
+
+flower.exe: main.obj mniplist.obj printrpt.obj memfunc.obj updtlist.obj
+    $(LINK) main+mniplist+printrpt+memfunc+updtlist, flower, flower;
+
+main.obj:     mydebug.h main.c mniplist.h printrpt.h structs.h memfunc.h updtlist.h
+    $(COMPILE) main.c
+
+mniplist.obj: mydebug.h mniplist.c mniplist.h structs.h memfunc.h
+    $(COMPILE) mniplist.c
+
+updtlist.obj: mydebug.h updtlist.c updtlist.h mniplist.h structs.h
+    $(COMPILE) updtlist.c
+
+memfunc.obj: mydebug.h memfunc.c memfunc.h structs.h
+    $(COMPILE) memfunc.c
+
+printrpt.obj: mydebug.h printrpt.c printrpt.h structs.h
+    $(COMPILE) printrpt.c
+

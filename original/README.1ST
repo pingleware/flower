@@ -1,0 +1,26 @@
+This zipfile should contain
+
+main.c       -mainline
+mniplist.c   -linked list manipulations
+mniplist.h   -header for linked list manipulations
+memfunc.c    -allocate/initialize structs
+memfunc.h    -header for allocate/initialize structs
+printrpt.c   -print the reports
+printrpt.h   -header for printing reports
+updtlist.c   -update linked lists
+updtlist.h   -header for update linked lists
+structs.h    -structs & some #defines
+mydebug.h    -debugging macros
+cmplopt.txt  -explanation of compile and link options
+output.txt   -sample output
+makefile     -duh
+flower.exe   -duh
+readme.1st   -you're looking at it
+flower.doc   -documentation
+file_id.diz  -short description of function
+flow.cmd     -executes flower using its own source code
+makeme.cmd   -executes nmake to build flower
+
+Documentation on use is in flower.doc, or run
+flower.exe without any command-line arguments.
+

@@ -1,0 +1,37 @@
+Compile options used in the makefile
+
+/C<[+]|->         /C+: Perform compile only, no link.
+                  /C-: Perform compile and link.  Default: /C-
+/G<3|4|5>         /G3: Generate code to optimize its use on an 80386
+                       processor.  Default: /G3
+                  /G4: Generate code to optimize its use on an 80486
+                       processor.
+                  /G5: Generate code to optimize its use on a Pentium
+                       processor.
+/L<[+]|->         Generate basic listing file.  Default: /L-
+/La<[+]|->        Include a layout of all referenced struct or union variables
+                  in the listing file.  Default: /La-
+/Ls<[+]|->        Include source statements in the listing file.  Default: /Ls-
+/Lx<[+]|->        Produce a cross-reference table of referenced variables
+                  in the listing file.  Default: /Lx-
+/Fa<[+]|->        Produce an assembler file.  Default: /Fa-
+/O<[+]|->         Turn on object code optimization.  Default: /O-
+/Tx<[+]|->        Generate full exception register dump.  Default: /Tx-
+/Wext<[+]|->      Warn about unused external definitions.
+/Wppt<[+]|->      Display a trace of preprocessor actions.
+/Wtrd<[+]|->      Warn about possible truncation or loss of data.
+/Wuni<[+]|->      Warn about uninitialised variables.
+/Wall<[+]|->      All /W suboptions. Default: /Wall-
+/V"string"        Set version string.  This option imbeds a given text string
+                  into the object file.
+
+Link options used in the makefile
+
+/PM:VIO           Generated EXE runs in either an OS/2 command-line
+                  window or full-screen.
+/ST:20480         Use a stack size of 20480
+/ALIGN:4          Align pages on 4 byte boundaries (recommended in doc)
+/L                Include line numbers
+/M                Generate a map file
+/EXEPACK          Compresses pages of data in the EXE (recommended in doc)
+
